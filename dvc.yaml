@@ -1,0 +1,14 @@
+# dvc.yaml
+stages:
+  train:
+    cmd: python train.py
+    deps:
+      - users.csv
+    params:
+      - lr
+      - train.epochs
+      - train.layers
+    outs:
+      - model.pkl
+
+# Tiene que tener esta estética, aunque se puede meter en CLI y se autogenera automáticamente
